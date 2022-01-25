@@ -4,3 +4,4 @@
 普 500、道琼斯工业指数、纳斯达克、日经 225、富时 100、法国 CAC40、德国 DAX、澳洲标普。
 4. 美国PMI
 5. 一致预期(ROE, net_profit)或类似数据
+6. 1y 3y 5y US treasury bond interest rate

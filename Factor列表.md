@@ -9,4 +9,4 @@
 8. Yield spreads (the difference between the 3-Month Treasury Bill Rate and the 10-Year Treasury Constant Maturity Rate, and the difference between the 3-Month Treasury Bill Rate and the 5-Year Treasury Constant Maturity Rate), inﬂation rates (consumer prices), money stocks (M1 and M2), aggregate output (industrial production), unemployment rates, federal funds rates, nominal effective exchange rates, and federal government debts 【其他：Industrial production growth, US consumer conﬁdence index, UK inﬂation rate, UK interest rates, world oil prices】
 9. 指数的回报（lag）、市盈率（PE）和股息收益率
 10. term spread、credit spread、股息率
-11. 中国市场的CPI同比增长率、兑美元汇率、银行间债券质押式、回购利率、货币供应量、M2、国内信贷数额
+11. 中国市场的CPI同比增长率、兑美元汇率、银行间债券质押式、回购利率、货币供应量、M2、国内信贷数额；景气先行指数、通货膨胀率、失业率、国债利率、信贷利差、M1 与 M0 增速差、M2 与 M1 增速差

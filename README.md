@@ -1,4 +1,91 @@
-***
+### 2.13 会议大纲
+记录人：Aaron
+Chang：
+傅里叶拆周期
+先做图，对比几个指数的峰，说明不同指数周期一样，振幅不一样，算几个系数周期振幅
+单个、两个拟合，正谐波叠加，转成正负一预测走势，回测放到最后一起对比
+结果：训练集不错，测试集运气不好，整体可以跑赢benchmark，
+Thomas：
+HMM模型：市场Return做回测，三个state, 测试集跑赢基准
+震荡平
+熊市空
+牛市多
+Chang的提问：
+识别牛熊市作为Y（潜在：Average、PS），其他指标作为X
+Nicole:
+Feature筛选的顺序：
+（1）基于规则识别牛熊筛选Y label
+（2）后面ML筛选X label
+先挑选X
+定性说明X和股市的变化关系
+使用基本统计的假设检验：1平稳性 2 显著性 3 自相关性（原理、机制＋图）
+做回归，看系数，auto correlation+ OLS，筛选出feature
+Hubert:
+五日predict Return 效果变差
+对于高频模型无正向作用
+Predict-ret非正态分布：大于0赋值1，小于0赋值-1（数据：Volume 涨跌较为随机、企业债利率涨跌情况）
+Data processing，PCA处理，整合在Nicole部分
+训练多个ML模型，performance matrix：F1
+（1）Logistic
+（2）SVC：可以改的参数很多
+最后使用SVC，样本外数据预测，日频，准确率100%，跑赢基准
+Return的结果更加频繁，总体收益率更好，显著高于基准
+Hubert的建议：几个策略对比，傅立叶短周期 长周期，调仓快慢进行对应
+Thomas的提问：机器学习的训练集的结果有必要放吗？
+Hubert的回答：样本外的结果更有说服力
+Thomas的赞美：绿色和红色的线更加直观，可以看到变化（两次熊市，其他在震荡）
+同一个机器学习，
+核心问题：保留哪个Y？PS（较为低频，只能识别较长周期）还是5day Average（信息量更多）
+PS没有预测2019的event driven熊市，所以用另一个指标？
+（1）赚得多但牛熊不直观
+（2）赚得少但牛熊更直观
+Chang的tips：机器学习时，宏观月频数据前移2月，每个点都不能及时拿到，训练和测试都要前移（M2以后的宏观数据需要前移）
+Huang的提示：牛熊的定义：20天涨跌（维基百科）/高盛更为人为的标签
+Hubert的补充：两个模型但并没有矛盾（针对不同投资者提供不同的策略）
+Chang的盲猜：最后还是HMM的效果最好
+Hubert的质疑：其他的因子有必要吗？都是噪音，数据频率不统一，不具有说服力
+Huang的警醒：即使不操作也需要考虑利率哦
+Hubert的出击：相对高频和低频分别用HMM和PS
+Chang的反思：深度网络还用吗？
+Hubert的反对：毫无解释效益，又烂又没用
+Huang的支持：可以写，从论文的角度来看，用不好来承托好
+Chang的满意：确实可以并行写几个Model，来丰富论文内容
+Hubert的任务：PS，20day average，移动数据来match
+Chang的入坑：他提出，他负责：神经网络
+Chang的甩锅：我的电脑不好（但他是最新的强大Apple M1 Pro？）
+Chang的迂回：这周先做，下周再说
+Chang的机智（苟）：说移，其实不用移，我们可以装样子，结果更重要
+Hubert的同意：Perry的指导思想
+Thomas的质疑：为什么高盛的标准是对的？为什么要选择高盛
+ Aaron的任务：3个月的国债收益率，Goldman牛熊标签
+Chang的爱国：坚持用母语书写
+重要的事情：
+图的统一模板，Python notebook，标签放大
+Hubert 的latex PPT讲解
+
+文章的核心顺序：
+
+FFT
+
+PS
+
+Feature selection
+
+HMM
+
+Classical ML
+
+文章的撰写结构：
+Refer to Huang的Word
+Thomas：Intro PS LT
+Chang：FFT
+Nichole：Features&统计
+Hubert：ML
+Aaron：标签给Hubert
+Huang&Aaron：Translate
+下周周六晚Due
+
+
 ### 2.5 会议大纲
 ### 上周工作总结
 - Guangyu Wang: 

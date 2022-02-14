@@ -1,18 +1,18 @@
 ### 2.13 会议大纲
 记录人：Aaron
 Chang：
-傅里叶拆周期
+-傅里叶拆周期
 先做图，对比几个指数的峰，说明不同指数周期一样，振幅不一样，算几个系数周期振幅
 单个、两个拟合，正谐波叠加，转成正负一预测走势，回测放到最后一起对比
 结果：训练集不错，测试集运气不好，整体可以跑赢benchmark，
-Thomas：
+-Thomas：
 HMM模型：市场Return做回测，三个state, 测试集跑赢基准
 震荡平
 熊市空
 牛市多
 Chang的提问：
 识别牛熊市作为Y（潜在：Average、PS），其他指标作为X
-Nicole:
+-Nicole:
 Feature筛选的顺序：
 （1）基于规则识别牛熊筛选Y label
 （2）后面ML筛选X label
@@ -20,12 +20,12 @@ Feature筛选的顺序：
 定性说明X和股市的变化关系
 使用基本统计的假设检验：1平稳性 2 显著性 3 自相关性（原理、机制＋图）
 做回归，看系数，auto correlation+ OLS，筛选出feature
-Hubert:
+-Hubert:
 五日predict Return 效果变差
 对于高频模型无正向作用
 Predict-ret非正态分布：大于0赋值1，小于0赋值-1（数据：Volume 涨跌较为随机、企业债利率涨跌情况）
 Data processing，PCA处理，整合在Nicole部分
-训练多个ML模型，performance matrix：F1
+-训练多个ML模型，performance matrix：F1
 （1）Logistic
 （2）SVC：可以改的参数很多
 最后使用SVC，样本外数据预测，日频，准确率100%，跑赢基准
@@ -63,7 +63,7 @@ Chang的爱国：坚持用母语书写
 图的统一模板，Python notebook，标签放大
 Hubert 的latex PPT讲解
 
-文章的核心顺序：
+-文章的核心顺序：
 
 FFT
 
@@ -75,7 +75,7 @@ HMM
 
 Classical ML
 
-文章的撰写结构：
+-文章的撰写结构：
 Refer to Huang的Word
 Thomas：Intro PS LT
 Chang：FFT
